@@ -25,9 +25,22 @@ namespace taocp_tests
             Assert.AreEqual(expect, result);
         }
 
+        [Test]
+        public void EuclidTest2()
+        {
+            // Arrange
+            var m = 119;
+            var n = 544;
+            // Act
+            var result = GetGreatestCommonFactor(m, n);
+
+            // Assert
+            Assert.AreEqual(m % result , n % result);
+        }
+
         private int GetGreatestCommonFactor(int m, int n)
         {
-            if (m < n || m == 0 || n == 0)
+            if (m == 0 || n == 0)
                 throw new ArgumentException("Invalid parameters");
             var rest = m % n;
             while (rest != 0)
