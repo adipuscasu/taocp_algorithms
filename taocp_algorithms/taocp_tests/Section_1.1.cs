@@ -16,13 +16,12 @@ namespace taocp_tests
             // Arrange
             var m = 7;
             var n = 3;
-            var expect = 1;
-            var result = 0;
             // Act
-            result = GetGreatestCommonFactor(m, n);
+            var result = GetGreatestCommonFactor(m, n);
 
             // Assert
-            Assert.AreEqual(expect, result);
+            Assert.AreEqual(m % result , n % result);
+
         }
 
         [Test]
